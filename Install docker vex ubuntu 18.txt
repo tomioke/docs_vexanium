@@ -36,8 +36,10 @@ Setup vexanium docker dev
 Download container by the following command
 $ docker pull technonium/vexanium
 
-run container:
-$ docker run --rm -ti technonium/vexanium bash
+====================================================================================================
+
+run container after install:
+$ sudo docker run --rm -ti technonium/vexanium bash
 
 Set rpc node to connect blockchain:
 $ export URL=http://api.databisnis.id
