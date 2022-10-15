@@ -1,13 +1,6 @@
 https://hub.docker.com/r/technonium/vexanium
 https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu
 
-Machine settings
-
-ip: 103.171.84.27
-username: vex_env
-password: gL9aR5mU7zC0yR3p
-resource: vexanium_code
-
 First setup 
 
 $ sudo apt update
