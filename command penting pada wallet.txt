@@ -4,10 +4,6 @@ $ clivex -u $URL wallet list
 Jika kosong buat wallet baru dengan nama sesuai:
 $ clivex -u $URL wallet create -n <nama-wallet> --to-console
 
-Simpan nama wallet dan password
-Nama: development
-Password : PW5JnHLLE6PpfhuWdvqhf92F8rSJjQ4S7RgoYLjiEHYxzYpzDXNKc
-
 Cek lagi dengan 
 $ clivex -u $URL wallet list
 
@@ -21,7 +17,6 @@ $ clivex -u $URL wallet unlock -n <nama-wallet> --password <masukan_password>
 
 Import wallet ke wallet yg sudah dibuat dengan nama:
 $ clivex -u $URL wallet import -n <nama-wallet> --private-key <masukan_privatekey>
-5HsAnWdeCYWMUmvhShMvZxTYPa3WEstfR4tC1nayXhVdMucpb7w
 
 Cek alamat publik dari wallet yang terbuka/tidak dikunci:
 $ clivex -u $URL wallet keys 
