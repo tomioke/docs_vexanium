@@ -1,0 +1,56 @@
+https://hub.docker.com/r/technonium/vexanium
+https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu
+
+Machine settings
+
+ip: 103.171.84.27
+username: vex_env
+password: gL9aR5mU7zC0yR3p
+resource: vexanium_code
+
+First setup 
+
+$ sudo apt update
+$ sudo apt-get install curl apt-transport-https ca-certificates software-properties-common
+
+Add the Docker Repositories
+
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+just update the repository information:
+$ sudo apt update
+
+Make sure you are installing from the Docker repo instead of the default Ubuntu repo with this command:
+$ apt-cache policy docker-ce
+As you can see, docker-ce is not installed, so we can move on to the next step.
+
+We are almost done. Use the apt command to install Docker:
+$ sudo apt install docker-ce
+
+Check Docker Status & version
+$ sudo systemctl status docker
+$ docker version
+
+Add permission:
+$ sudo chmod 666 /var/run/docker.sock
+
+
+====================================================================================================
+
+Setup vexanium docker dev
+
+Download container by the following command
+$ docker pull technonium/vexanium
+
+run container:
+$ docker run --rm -ti technonium/vexanium bash
+
+Set rpc node to connect blockchain:
+$ export URL=http://api.databisnis.id
+
+Get account info:
+$ clivex -u $URL get account tomivexan
+
+to close docker bash :
+$ exit
