@@ -33,8 +33,13 @@ $ sudo chmod 666 /var/run/docker.sock
 
 Setup vexanium docker dev
 
+$ sudo su
+
 Download container by the following command
 $ docker pull technonium/vexanium
+
+Run for system integrate
+$ docker run --name vexaniumtest -e URL=api.databisnis.id -d technonium/vexanium 
 
 ====================================================================================================
 
