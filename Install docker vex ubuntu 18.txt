@@ -1,5 +1,6 @@
 https://hub.docker.com/r/technonium/vexanium
 https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 
 First setup 
 
@@ -39,12 +40,16 @@ Download container by the following command
 $ docker pull technonium/vexanium
 
 Run for system integrate
-$ docker run --name vexaniumtest -e URL=api.databisnis.id -d technonium/vexanium 
+$ docker run --name vexaniumtest -p 8090:80 -d technonium/vexanium:latest
+
+Docker will respond with the container's id. But, just to be sure that the container has been created and is running, we can get a list of running containers in this way:
+
+$ docker ps -a
 
 ====================================================================================================
 
 run container after install:
-$ sudo docker run --rm -ti technonium/vexanium bash
+$ docker exec -it vexaniumtest bash
 
 Set rpc node to connect blockchain:
 $ export URL=http://api.databisnis.id
